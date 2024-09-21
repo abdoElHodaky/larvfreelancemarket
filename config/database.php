@@ -175,7 +175,7 @@ return [
         ],
 
         'horizon' => [
-            'url' => env('REDIS_URL'),
+            'url' => env('REDIS_URL',"redis://default:AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA@known-skink-21141.upstash.io:6379"),
             'host' => env('REDIS_HOST', '127.0.0.1'),
             'password' => env('REDIS_PASSWORD', null),
             'port' => env('REDIS_PORT', '6379'),
