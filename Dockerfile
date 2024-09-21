@@ -28,7 +28,6 @@ RUN chmod -R 777 . && \
 composer install && npm install && \
 npm run prod && php artisan storage:link && \
 php artisan vendor:publish --tag=laravel-assets --ansi --force
-
 #RUN php artisan migrate --force && php artisan db:seed --force
 #RUN php artisan scout:import
 EXPOSE 8080
