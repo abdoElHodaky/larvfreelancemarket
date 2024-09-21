@@ -1,6 +1,7 @@
 FROM richarvey/nginx-php-fpm:1.9.1
 RUN apk add -U --no-cache nghttp2-dev nodejs npm unzip tzdata
 RUN docker-php-ext-install pcntl 
+RUN pecl install redis && docker-php-ext-enable redis
 COPY . /var/www/html
 
 ENV SKIP_COMPOSER=0
