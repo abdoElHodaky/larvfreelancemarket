@@ -127,51 +127,51 @@ return [
         ],
 
         'default' => [
-            'url' => env('REDIS_URL'),
+            'url' => env('REDIS_URL',"redis://default:AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA@known-skink-21141.upstash.io:6379"),
             'host' => env('REDIS_HOST', '127.0.0.1'),
             'password' => env('REDIS_PASSWORD', null),
             'port' => env('REDIS_PORT', '6379'),
-            'database' => env('REDIS_DB', '0'),
+            'database' => env('REDIS_DB', ''),
         ],
 
         'cache' => [
-            'url' => env('REDIS_URL'),
+            'url' => env('REDIS_URL',"redis://default:AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA@known-skink-21141.upstash.io:6379" ),
             'host' => env('REDIS_HOST', '127.0.0.1'),
             'password' => env('REDIS_PASSWORD', null),
             'port' => env('REDIS_PORT', '6379'),
-            'database' => env('REDIS_CACHE_DB', '1'),
+            'database' => env('REDIS_CACHE_DB', ''),
         ],
 
         'session' => [
-            'url' => env('REDIS_URL'),
+            'url' => env('REDIS_URL',"redis-cli --tls -u redis://default:AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA@known-skink-21141.upstash.io:6379"),
             'host' => env('REDIS_HOST', '127.0.0.1'),
             'password' => env('REDIS_PASSWORD', null),
             'port' => env('REDIS_PORT', '6379'),
-            'database' => env('REDIS_SESSION_DB', '2'),
+            'database' => env('REDIS_SESSION_DB', ''),
         ],
 
         'queue' => [
-            'url' => env('REDIS_URL'),
+            'url' => env('REDIS_URL'," redis://default:AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA@known-skink-21141.upstash.io:6379"),
             'host' => env('REDIS_HOST', '127.0.0.1'),
             'password' => env('REDIS_PASSWORD', null),
             'port' => env('REDIS_PORT', '6379'),
-            'database' => env('REDIS_QUEUE_DB', '3'),
+            'database' => env('REDIS_QUEUE_DB', ''),
         ],
 
         'broadcast' => [
-            'url' => env('REDIS_URL'),
+            'url' => env('REDIS_URL'," redis://default:AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA@known-skink-21141.upstash.io:6379"),
             'host' => env('REDIS_HOST', '127.0.0.1'),
             'password' => env('REDIS_PASSWORD', null),
             'port' => env('REDIS_PORT', '6379'),
-            'database' => env('REDIS_BROADCAST_DB', '4'),
+            'database' => env('REDIS_BROADCAST_DB', ''),
         ],
 
         'debugbar' => [
-            'url' => env('REDIS_URL'),
+            'url' => env('REDIS_URL',"redis://default:AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA@known-skink-21141.upstash.io:6379"),
             'host' => env('REDIS_HOST', '127.0.0.1'),
             'password' => env('REDIS_PASSWORD', null),
             'port' => env('REDIS_PORT', '6379'),
-            'database' => env('REDIS_DEBUGBAR_DB', '5'),
+            'database' => env('REDIS_DEBUGBAR_DB', ''),
         ],
 
         'horizon' => [
@@ -179,7 +179,7 @@ return [
             'host' => env('REDIS_HOST', '127.0.0.1'),
             'password' => env('REDIS_PASSWORD', null),
             'port' => env('REDIS_PORT', '6379'),
-            'database' => env('REDIS_HORIZON_DB', '6'),
+            'database' => env('REDIS_HORIZON_DB', ''),
         ],
 
     ],
