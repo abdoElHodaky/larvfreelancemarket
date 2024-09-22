@@ -128,8 +128,8 @@ return [
 
         'default' => [
           //  'url' => env('REDIS_URL',"redis://default:AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA@known-skink-21141.upstash.io:6379"),
-            'host' => env("REDIS_HOST",'tlsv1.2://known-skink-21141.upstash.io'),
-            'password' => env('REDIS_PASSWORD', "AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA"),
+            'host' => env("REDIS_HOST"),
+            'password' => env('REDIS_PASSWORD'),
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_DB', ''),
             'read_timeout'=>120
@@ -137,8 +137,8 @@ return [
 
         'cache' => [
            // 'url' => env('REDIS_URL',"redis://default:AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA@known-skink-21141.upstash.io:6379" ),
-            'host' => env("REDIS_HOST",'tlsv1.2://known-skink-21141.upstash.io'),
-            'password' => env('REDIS_PASSWORD', "AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA"),
+            'host' => env("REDIS_HOST"),
+            'password' => env('REDIS_PASSWORD'),
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_DB', ''),
             'read_timeout'=>120
@@ -146,8 +146,8 @@ return [
 
         'session' => [
           //  'url' => env('REDIS_URL',"redis-cli --tls -u redis://default:AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA@known-skink-21141.upstash.io:6379"),
-            'host' => env("REDIS_HOST",'tlsv1.2://known-skink-21141.upstash.io'),
-            'password' => env('REDIS_PASSWORD', "AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA"),
+            'host' => env("REDIS_HOST"),
+            'password' => env('REDIS_PASSWORD'),
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_DB', ''),
             'read_timeout'=>120
@@ -155,8 +155,8 @@ return [
 
         'queue' => [
             //'url' => env('REDIS_URL'," redis://default:AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA@known-skink-21141.upstash.io:6379"),
-            'host' => env("REDIS_HOST",'tlsv1.2://known-skink-21141.upstash.io'),
-            'password' => env('REDIS_PASSWORD', "AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA"),
+            'host' => env("REDIS_HOST"),
+            'password' => env('REDIS_PASSWORD'),
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_DB', ''),
             'read_timeout'=>120
@@ -164,8 +164,8 @@ return [
 
         'broadcast' => [
             //'url' => env('REDIS_URL'," redis://default:AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA@known-skink-21141.upstash.io:6379"),
-            'host' => env("REDIS_HOST",'tlsv1.2://known-skink-21141.upstash.io'),
-            'password' => env('REDIS_PASSWORD', "AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA"),
+            'host' => env("REDIS_HOST"),
+            'password' => env('REDIS_PASSWORD'),
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_DB', ''),
             'read_timeout'=>120
@@ -173,8 +173,8 @@ return [
 
         'debugbar' => [
             //'url' => env('REDIS_URL',"redis://default:AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA@known-skink-21141.upstash.io:6379"),
-            'host' => env("REDIS_HOST",'tlsv1.2://known-skink-21141.upstash.io'),
-            'password' => env('REDIS_PASSWORD', "AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA"),
+            'host' => env("REDIS_HOST"),
+            'password' => env('REDIS_PASSWORD'),
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_DB', ''),
             'read_timeout'=>120
@@ -182,8 +182,8 @@ return [
 
         'horizon' => [
             //'url' => env('REDIS_URL',"redis://default:AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA@known-skink-21141.upstash.io:6379"),
-            'host' => env("REDIS_HOST",'tlsv1.2://known-skink-21141.upstash.io'),
-            'password' => env('REDIS_PASSWORD', "AVKVAAIjcDE4YjY2OTlhMjVlNTU0Y2MwOTgxZjQ4YTY2NzUzMDBkMHAxMA"),
+            'host' => env("REDIS_HOST"),
+            'password' => env('REDIS_PASSWORD'),
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_DB', ''),
             'read_timeout'=>120
