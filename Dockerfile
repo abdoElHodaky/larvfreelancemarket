@@ -25,7 +25,7 @@ ENV NPX_ALLOW_SUPERUSER=1
 RUN echo 'pm.max_children = 15' >> /usr/local/etc/php-fpm.d/zz-docker.conf && \
 echo 'pm.max_requests = 500' >> /usr/local/etc/php-fpm.d/zz-docker.conf
 RUN chmod -R 777 . && \
-composer install && npm install && \
+composer install && npm install workbox-window --save && \
 php artisan storage:link 
 RUN RUN npm install laravel-mix-workbox --save-dev && \
 npm run prod && \
