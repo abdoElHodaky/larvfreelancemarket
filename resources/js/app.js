@@ -3,7 +3,7 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-
+import {Workbox} from 'workbox-window';
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -31,3 +31,11 @@ window.onload = function () {
         el: '#app',
     });
 }
+
+if ('serviceWorker' in navigator) {
+  const wb = new Workbox('/sw.js');
+
+  wb.register();
+}
+
+
