@@ -109,6 +109,6 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function freelanceWebsiteLink(): string
     {
-        return 'https://www.' . config("setting.freelance_website_domain") . $this->profile_link;
+        return 'https://' . config("setting.freelance_website_domain") . $this->profile_link;
     }
 }
