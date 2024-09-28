@@ -27,9 +27,8 @@ echo 'pm.max_requests = 500' >> /usr/local/etc/php-fpm.d/zz-docker.conf
 RUN chmod -R 777 . && \
 composer install && npm install workbox-window --save && \
 php artisan storage:link 
-RUN RUN npm install laravel-mix-workbox --save-dev && \
-npm run prod && \
-php artisan vendor:publish --tag=laravel-assets --ansi --force
+RUN npm install laravel-mix-workbox --save-dev && \
+npm run prod && php artisan vendor:publish --tag=laravel-assets --ansi --force
 #RUN php artisan migrate --force && php artisan db:seed --force
 #RUN php artisan scout:import
 EXPOSE 8080
