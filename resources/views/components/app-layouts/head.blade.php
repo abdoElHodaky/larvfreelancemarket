@@ -5,7 +5,7 @@
          
 <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<link rel="manifest" href="{{assest('/manifest.json')}}/>
+<link rel="manifest" href="{{assest('/manifest.json')}}"/>
 @hasSection('title')
     <title>@yield('title') - {{ config('app.name') }}</title>
 @else
