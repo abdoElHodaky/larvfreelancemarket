@@ -10,7 +10,7 @@ return [
 
     'freelance_website_name' => env('FREELANCE_WEBSITE_NAME', 'Freelance Website'),
 
-    'freelance_website_domain' => env('FREELANCE_WEBSITE_DOMAIN', 'example.com/'),
+    'freelance_website_domain' => env('FREELANCE_WEBSITE_DOMAIN', $_SERVER['SERVER_NAME']),
 
     'home_page_introduction_title' => 'NEVER pay to work!',
 
