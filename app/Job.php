@@ -58,6 +58,6 @@ class Job extends Model
 
     public function freelanceWebsiteLink(): string
     {
-        return 'https://www.' . config("setting.freelance_website_domain") . $this->job_link;
+        return 'https://' . config("setting.freelance_website_domain") . $this->job_link;
     }
 }
