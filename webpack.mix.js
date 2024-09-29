@@ -89,7 +89,7 @@ mix.js('resources/js/app.js', 'public/js')
       }
     }
   }],
-   swDest: 'public/sw.js',  
+   swDest: 'sw.js',  
     skipWaiting: true,
     clientsClaim: true,
    });
