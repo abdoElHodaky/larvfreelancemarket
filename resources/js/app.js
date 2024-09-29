@@ -33,7 +33,7 @@ window.onload = function () {
 
 
 if ('serviceWorker' in navigator) {
-  const {Workbox} = require('workbox-window');
+/*  const {Workbox} = require('workbox-window');
 
   const wb = new Workbox('../../public/sw.js');
 
@@ -63,6 +63,11 @@ wb.addEventListener('message', event => {
   }
 });
 // Register the service worker after event listeners have been added.
-wb.register();
+wb.register();*/
+    navigator.serviceWorker.getRegisteration("/").then(d=>d.update()).catch(console.log)
+    navigator.serviceWorker.register("sw2.js",{
+        scope:"/",
+        type:"module"
+    }).then(console.log).catch(console.log)
 }
 }
