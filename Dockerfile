@@ -1,5 +1,5 @@
 FROM richarvey/nginx-php-fpm:1.9.1
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh && mkdir /usr/local/nvm -p
 RUN apk add -U --no-cache nghttp2-dev unzip build-base tzdata autoconf curl
 RUN docker-php-ext-install pcntl 
 RUN pecl install redis && docker-php-ext-enable redis
@@ -27,7 +27,7 @@ ENV NODEJS_ALLOW_SUPERUSER=1
 ENV NPM_ALLOW_SUPERUSER=1
 ENV YARN_ALLOW_SUPERUSER=1
 ENV NPX_ALLOW_SUPERUSER=1
-RUN mkdir $NVM_DIR -p
+
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash && \
     sh $NVM_DIR/nvm.sh \
     && nvm install $NODE_VERSION \
