@@ -64,7 +64,7 @@ mix.js('resources/js/app.js', 'public/js')
       }
     },
   },{
-    urlPattern: ({request, url}) => {request.method=="POST"},
+    urlPattern: ({request, url}) => request.method.toLowerCase()=="post",
     handler:"NetworkOnly",
     method:"POST",
     options:{
