@@ -3,7 +3,7 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-import {Workbox} from 'workbox-window';
+//import {Workbox} from 'workbox-window';
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -33,9 +33,23 @@ window.onload = function () {
 }
 
 if ('serviceWorker' in navigator) {
+  const {Workbox} = await import('workbox-window');
+
   const wb = new Workbox('/sw.js');
 
-  wb.register();
+wb.addEventListener('activated', event => {
+  // `event.isUpdate` will be true if another version of the service
+  // worker was controlling the page when this version was registered.
+  if (!event.isUpdate) {
+    console.log('Service worker activated for the first time!');
+
+    // If your service worker is configured to precache assets, those
+    // assets should all be available now.
+  }
+});
+
+// Register the service worker after event listeners have been added.
+wb.register();
 }
 
 
