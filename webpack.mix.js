@@ -43,11 +43,15 @@ mix.js('resources/js/app.js', 'public/js')
         handler: 'CacheFirst',
         options: {
                   // Use a custom cache name.
-                  cacheName: 'images',
+          cacheName: 'images',
+          expiration: {
+            maxEntries: 20,
+	        maxAgeSeconds: 2 * 24 * 60 * 60,
+          }
         }
     },
     {
-    urlPattern:"https://cdn.*.com/**" /*({request, url}) =>{url.includes("cdn")==true}*/,
+    urlPattern:/*"https://cdn.*.com/**" */({request, url}) =>url.includes("cdn")==true,
     handler: 'NetworkFirst',
     options: {
       cacheName: 'cdns',
@@ -60,7 +64,7 @@ mix.js('resources/js/app.js', 'public/js')
       }
     },
   },{
-    urlPattern:"/**/"/* ({request, url}) => {request.method=="POST"}*/,
+    urlPattern: ({request, url}) => {request.method=="POST"},
     handler:"NetworkOnly",
     method:"POST",
     options:{
@@ -76,7 +80,7 @@ mix.js('resources/js/app.js', 'public/js')
       }
     }
   },{
-    urlPattern:"https://fonts.*.com/**"/* ({request, url}) =>{url.includes("fonts")==true}*/,
+    urlPattern:/*"https://fonts.*.com/**"*/ ({request, url}) =>url.includes("fonts")==true,
     handler: 'NetworkFirst',
     options: {
       cacheName: 'cdns',
