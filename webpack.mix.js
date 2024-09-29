@@ -32,9 +32,8 @@ mix.js('resources/js/app.js', 'public/js')
     exclude:[
         "mix.js"
     ],
-	globPatterns: [
-		'**/*.{css,png,jpg,ico,html,js,txt}'
-	],
+	clientsClaim: true,
+    skipWaiting: true,
 	navigateFallback:"/offline.html",
 	runtimeCaching: [{
     urlPattern: ({request, url}) =>url.includes("cdn")==true,
@@ -80,7 +79,6 @@ mix.js('resources/js/app.js', 'public/js')
     }
   }],
    swDest: 'public/sw.js',  
-    clientsClaim: true,
-    skipWaiting: true
+    
        
    });
