@@ -35,7 +35,7 @@ window.onload = function () {
 if ('serviceWorker' in navigator) {
 /*  const {Workbox} = require('workbox-window');
 
-  const wb = new Workbox('../../public/sw.js');
+  const wb = new Workbox('/sw.js');
 
 wb.addEventListener('activated', event => {
   // `event.isUpdate` will be true if another version of the service
