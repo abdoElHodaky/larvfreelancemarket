@@ -27,7 +27,8 @@ echo 'pm.max_requests = 500' >> /usr/local/etc/php-fpm.d/zz-docker.conf
 RUN chmod -R 777 . && \
 composer install && npm install && \
 php artisan storage:link 
-RUN  php artisan vendor:publish --tag=laravel-assets --ansi --force
+RUN  php artisan vendor:publish --tag=laravel-assets --ansi --force && \
+npm run prod
 #RUN php artisan migrate --force && php artisan db:seed --force
 #RUN php artisan scout:import
 EXPOSE 8080
