@@ -24,8 +24,11 @@
 <script async src="{{ mix('js/manifest.js') }}"></script>
 <script async src="{{ mix('js/vendor.js') }}"></script>
 <script async src="{{ mix('js/app.js') }}"></script>
-<script defer src="//cdn.jsdelivr.net/npm/eruda"></script>
-<script>eruda.init();</script>
+<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+<script>
+    window.onload=(event)=>{
+    eruda.init();}
+</script>
 <x-app-layouts.notification-channel/>
 @stack('scripts')
 
