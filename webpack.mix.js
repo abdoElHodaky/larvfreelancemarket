@@ -28,7 +28,7 @@ mix.js('resources/js/app.js', 'public/js')
    .copyDirectory('node_modules/tinymce/skins', 'public/node_modules/tinymce/skins')
    .copyDirectory('node_modules/tinymce/themes', 'public/node_modules/tinymce/themes').
    generateSW({
-	globDirectory: 'public/',
+	directoryIndex: 'public/',
     exclude:[
         "mix.js"
     ],
