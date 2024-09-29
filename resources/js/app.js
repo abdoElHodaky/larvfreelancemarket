@@ -30,12 +30,12 @@ window.onload = function () {
     const app = new Vue({
         el: '#app',
     });
-}
+
 
 if ('serviceWorker' in navigator) {
   const {Workbox} = require('workbox-window');
 
-  const wb = new Workbox('/sw.js');
+  const wb = new Workbox('../../public/sw.js');
 
 wb.addEventListener('activated', event => {
   // `event.isUpdate` will be true if another version of the service
@@ -65,5 +65,4 @@ wb.addEventListener('message', event => {
 // Register the service worker after event listeners have been added.
 wb.register();
 }
-
-
+}
