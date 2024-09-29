@@ -17,18 +17,21 @@
         "cross-env": "^5.2.1",
         "jquery": "^3.2",
         "laravel-mix": "^5.0.1",
+        "laravel-mix-workbox": "^0.1.4",
         "lodash": "^4.17.13",
         "popper.js": "^1.12",
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.20.1",
         "sass-loader": "^8.0.0",
         "vue": "^2.5.17",
-        "vue-template-compiler": "^2.6.10"
+        "vue-template-compiler": "^2.6.10",
+        "workbox-webpack-plugin": "^7.1.0"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.12.1",
         "laravel-echo": "^1.6.1",
         "socket.io-client": "^2.3.0",
-        "tinymce": "^5.2.0"
+        "tinymce": "^5.2.0",
+        "workbox-window": "^7.1.0"
     }
 }
