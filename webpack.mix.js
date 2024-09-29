@@ -29,14 +29,25 @@ mix.js('resources/js/app.js', 'public/js')
    .copyDirectory('node_modules/tinymce/themes', 'public/node_modules/tinymce/themes').
    generateSW({
 	directoryIndex: 'public/',
-    exclude:[
-        "mix.js"
-    ],
-	clientsClaim: true,
-    skipWaiting: true,
+    exclude: [
+          /\.(?:png|jpg|jpeg|svg)$/,
+          // Ignore the mix.js that's being generated 
+          'mix.js'
+      ],
 	navigateFallback:"/offline.html",
-	runtimeCaching: [{
-    urlPattern: ({request, url}) =>url.includes("cdn")==true,
+	runtimeCaching: [
+    {
+        urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+
+              // Apply a cache-first strategy.
+        handler: 'CacheFirst',
+        options: {
+                  // Use a custom cache name.
+                  cacheName: 'images',
+        }
+    },
+    {
+    urlPattern: ({request, url}) =>{url.includes("cdn")==true},
     handler: 'NetworkFirst',
     options: {
       cacheName: 'cdns',
@@ -49,7 +60,7 @@ mix.js('resources/js/app.js', 'public/js')
       }
     },
   },{
-    urlPattern: ({request, url}) => request.method=="POST",
+    urlPattern: ({request, url}) => {request.method=="POST"},
     handler:"NetworkOnly",
     method:"POST",
     options:{
@@ -65,7 +76,7 @@ mix.js('resources/js/app.js', 'public/js')
       }
     }
   },{
-    urlPattern: ({request, url}) =>url.includes("fonts")==true,
+    urlPattern: ({request, url}) =>{url.includes("fonts")==true},
     handler: 'NetworkFirst',
     options: {
       cacheName: 'cdns',
@@ -79,6 +90,6 @@ mix.js('resources/js/app.js', 'public/js')
     }
   }],
    swDest: 'public/sw.js',  
-    
-       
+    skipWaiting: true,
+    clientsClaim: true,
    });
