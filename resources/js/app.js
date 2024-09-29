@@ -33,9 +33,9 @@ window.onload = function () {
 
 
 if ('serviceWorker' in navigator) {
-/*  const {Workbox} = require('workbox-window');
+ const {Workbox} = require('workbox-window');
 
-  const wb = new Workbox('/sw.js');
+  const wb = new Workbox('sw2.js');
 
 wb.addEventListener('activated', event => {
   // `event.isUpdate` will be true if another version of the service
@@ -63,11 +63,6 @@ wb.addEventListener('message', event => {
   }
 });
 // Register the service worker after event listeners have been added.
-wb.register();*/
-    navigator.serviceWorker.getRegisteration("/").then(d=>if(d)d.update()).catch(console.log)
-    navigator.serviceWorker.register("sw2.js",{
-        scope:"/",
-       // type:"module"
-    }).then(console.log).catch(console.log)
+wb.register()
 }
 }
