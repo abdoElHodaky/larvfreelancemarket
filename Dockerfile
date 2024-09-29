@@ -1,6 +1,6 @@
 FROM richarvey/nginx-php-fpm:1.9.1
-RUN apk add -U --no-cache nghttp2-dev nodejs npm unzip build-base tzdata autoconf 
-RUN apk add --update npm
+RUN apk add -U --no-cache nghttp2-dev unzip build-base tzdata autoconf curl
+RUN apk add --update nodejs npm
 RUN docker-php-ext-install pcntl 
 RUN pecl install redis && docker-php-ext-enable redis
 COPY . /var/www/html
