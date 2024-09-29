@@ -27,8 +27,9 @@ ENV NODEJS_ALLOW_SUPERUSER=1
 ENV NPM_ALLOW_SUPERUSER=1
 ENV YARN_ALLOW_SUPERUSER=1
 ENV NPX_ALLOW_SUPERUSER=1
+RUN mkdir $NVM_DIR -p
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash && \
-    . $NVM_DIR/nvm.sh \
+    sh $NVM_DIR/nvm.sh \
     && nvm install $NODE_VERSION \
     && nvm alias default $NODE_VERSION \
     && nvm use default
