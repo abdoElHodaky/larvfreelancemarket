@@ -26,8 +26,20 @@
 <script async src="{{ mix('js/app.js') }}"></script>
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>
-    window.onload=(event)=>{
-    eruda.init();}
+    
+    document.addEventListener('readystatechange', event => { 
+
+    // When HTML/DOM elements are ready:
+    if (event.target.readyState === "interactive") {   //does same as:  ..addEventListener("DOMContentLoaded"..
+        eruda.init();
+    }
+
+    // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
+    if (event.target.readyState === "complete") {
+        //
+    }
+});
+    
 </script>
 <x-app-layouts.notification-channel/>
 @stack('scripts')
