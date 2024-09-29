@@ -5,7 +5,7 @@
          
 <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<link rel="manifest" href="{{assest('/manifest.json')}}"/>
+<link rel="manifest" href="{{asset('/manifest.json')}}"/>
 @hasSection('title')
     <title>@yield('title') - {{ config('app.name') }}</title>
 @else
@@ -21,9 +21,9 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
 <!-- Scripts -->
-<script src="{{ mix('js/manifest.js') }}"></script>
-<script src="{{ mix('js/vendor.js') }}"></script>
-<script src="{{ mix('js/app.js') }}"></script>
+<script async src="{{ mix('js/manifest.js') }}"></script>
+<script async src="{{ mix('js/vendor.js') }}"></script>
+<script async src="{{ mix('js/app.js') }}"></script>
 <script defer src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
 <x-app-layouts.notification-channel/>
