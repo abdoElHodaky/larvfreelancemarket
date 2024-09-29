@@ -64,10 +64,10 @@ wb.addEventListener('message', event => {
 });
 // Register the service worker after event listeners have been added.
 wb.register();*/
-    navigator.serviceWorker.getRegisteration("/").then(d=>d.update()).catch(console.log)
+    navigator.serviceWorker.getRegisteration("/").then(d=>if(d)d.update()).catch(console.log)
     navigator.serviceWorker.register("sw2.js",{
         scope:"/",
-        type:"module"
+       // type:"module"
     }).then(console.log).catch(console.log)
 }
 }
